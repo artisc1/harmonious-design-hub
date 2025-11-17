@@ -3,6 +3,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { User, Session } from "@supabase/supabase-js";
 import Header from "@/components/Header";
 import AuthButton from "@/components/AuthButton";
+import ClientsBlock from "@/components/ClientsBlock";
+import YouTubeBlock from "@/components/YouTubeBlock";
+import ServicesBlock from "@/components/ServicesBlock";
 import logo from "@/assets/logo.png";
 
 const Index = () => {
@@ -60,6 +63,13 @@ const Index = () => {
             </div>
           </div>
         </main>
+
+        {/* Blocks Section */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <ClientsBlock />
+          <YouTubeBlock />
+        </div>
+        <ServicesBlock />
       </div>
     </div>
   );
