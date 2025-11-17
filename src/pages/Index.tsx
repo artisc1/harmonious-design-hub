@@ -6,6 +6,7 @@ import AuthButton from "@/components/AuthButton";
 import ClientsBlock from "@/components/ClientsBlock";
 import YouTubeBlock from "@/components/YouTubeBlock";
 import ServicesBlock from "@/components/ServicesBlock";
+import ContactForm from "@/components/ContactForm";
 import logo from "@/assets/logo.png";
 
 const Index = () => {
@@ -70,6 +71,7 @@ const Index = () => {
           <YouTubeBlock />
         </div>
         <ServicesBlock />
+        <ContactForm />
       </div>
     </div>
   );
