@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Введите имя").max(100, "Имя слишком длинное"),
@@ -32,11 +31,8 @@ const ContactForm = () => {
       const validated = contactSchema.parse(formData);
       setLoading(true);
 
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: validated,
-      });
-
-      if (error) throw error;
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({
         title: "Заявка отправлена",
