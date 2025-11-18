@@ -28,12 +28,12 @@ const AboutBlock = () => {
           О нас
         </h2>
         
-        <Carousel className="w-full max-w-5xl mx-auto">
+        <Carousel className="w-full max-w-2xl mx-auto">
           <CarouselContent>
             {slides.map((slide, index) => (
               <CarouselItem key={index}>
                 <Card className="border-border/20 bg-card/50 backdrop-blur-sm">
-                  <CardContent className="p-6">
+                  <CardContent className="p-3">
                     <img 
                       src={slide.image} 
                       alt={slide.title}
