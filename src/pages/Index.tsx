@@ -7,6 +7,7 @@ import ClientsBlock from "@/components/ClientsBlock";
 import YouTubeBlock from "@/components/YouTubeBlock";
 import ServicesBlock from "@/components/ServicesBlock";
 import ContactForm from "@/components/ContactForm";
+import AboutBlock from "@/components/AboutBlock";
 import logo from "@/assets/logo.png";
 
 const Index = () => {
@@ -66,6 +67,7 @@ const Index = () => {
         </main>
 
         {/* Blocks Section */}
+        <AboutBlock />
         <div className="grid md:grid-cols-2 gap-8">
           <ClientsBlock />
           <YouTubeBlock />
