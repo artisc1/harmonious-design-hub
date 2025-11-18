@@ -1,9 +1,14 @@
+import ferreroLogo from "@/assets/client-ferrero.jpg";
+import siberianLogo from "@/assets/client-siberian.jpg";
+import kulikovLogo from "@/assets/client-kulikov.jpg";
+import olympLogo from "@/assets/client-olymp.jpg";
+
 const ClientsBlock = () => {
   const clients = [
-    "Компания А",
-    "Компания Б", 
-    "Компания В",
-    "Компания Г"
+    { name: "Компания А", logo: ferreroLogo },
+    { name: "Компания Б", logo: siberianLogo },
+    { name: "Компания В", logo: kulikovLogo },
+    { name: "Компания Г", logo: olympLogo }
   ];
 
   return (
@@ -16,9 +21,14 @@ const ClientsBlock = () => {
           {clients.map((client, index) => (
             <div 
               key={index}
-              className="bg-card/50 backdrop-blur-sm p-6 rounded-lg text-center border border-border/20 hover:border-border/40 transition-all"
+              className="bg-card/50 backdrop-blur-sm p-6 rounded-lg flex flex-col items-center justify-center border border-border/20 hover:border-border/40 transition-all"
             >
-              <p className="text-foreground/70 font-light">{client}</p>
+              <img 
+                src={client.logo} 
+                alt={client.name}
+                className="w-full h-auto object-contain mb-3"
+              />
+              <p className="text-foreground/70 font-light text-sm">{client.name}</p>
             </div>
           ))}
         </div>
